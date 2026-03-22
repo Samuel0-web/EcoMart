@@ -1,0 +1,26 @@
+/* custom/css/layout.css */
+/* Layout and structure styles */
+/* ========== HEADER ========== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.flex {
+  display: flex;
+}

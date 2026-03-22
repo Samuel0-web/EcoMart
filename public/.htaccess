@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# Remove .php extension from URL
+RewriteCond %{THE_REQUEST} \.php [NC]
+RewriteRule ^(.+)\.php$ /eco/$1 [R=301,L]
+
+# If file exists, serve it
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# If folder exists, serve it
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Otherwise send everything to router.php
+RewriteRule ^ router.php [L]
